@@ -16,7 +16,7 @@ function stripSessionCookies(cookieHeader: string | null): string | undefined {
     );
   return filtered.length > 0 ? filtered.join("; ") : undefined;
 }
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const hasSessionCookie = SESSION_COOKIE_NAMES.some((name) =>
     request.cookies.has(name),
   );
