@@ -1,12 +1,14 @@
+
 @import "tailwindcss";
+@import "react-day-picker/dist/style.css";
 
 @theme {
   --color-brand-50: #fff1f4;
   --color-brand-100: #ffe0e8;
-  --color-brand-200: #ffc7d7;
+  --color-brand-200: #ffc2d2;
   --color-brand-300: #ff97b1;
   --color-brand-400: #ff5d86;
-  --color-brand-500: #ff285c;
+  --color-brand-500: #ff385c;
   --color-brand-600: #e61e4d;
   --color-brand-700: #c41840;
 
@@ -22,11 +24,11 @@
   --color-ink-900: #0f172a;
 
   --color-surface: #ffffff;
-  --color-surface-muted: #fafafc;
+  --color-surface-muted: #f8fafc;
 }
 
 body {
-  background-color: var(--color-ink-50);
+  background: var(--color-ink-50);
   color: var(--color-ink-900);
   overflow-x: hidden;
 }
@@ -51,21 +53,24 @@ input:disabled {
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none;
 }
 
 .hero-daypicker .rdp-months {
   justify-content: center;
 }
+
 .hero-daypicker .rdp-day_disabled {
   color: var(--color-ink-300);
   text-decoration: line-through;
   opacity: 0.75;
 }
+
 .hero-daypicker .rdp-day:focus-visible {
   outline: 2px solid var(--color-brand-400);
   outline-offset: 2px;
@@ -74,22 +79,26 @@ input:disabled {
 .compact-uploadthing {
   min-height: 150px !important;
 }
+
 .compact-uploadthing > div {
   min-height: 150px !important;
   height: 150px !important;
   padding-top: 0.5rem !important;
-  padding-bottom: 0.25rem !important;
+  padding-bottom: 0.5rem !important;
 }
+
 .compact-uploadthing [data-ut-element="dropzone"] {
   min-height: 150px !important;
   height: 150px !important;
   justify-content: center !important;
   gap: 0.35rem !important;
 }
+
 .compact-uploadthing svg {
   width: 42px !important;
   height: 42px !important;
 }
+
 .compact-uploadthing button {
   margin-top: 0.2rem !important;
 }
@@ -104,10 +113,11 @@ input:disabled {
     transform: translateY(0) scale(1);
   }
 }
+
 .host-listing-card {
   opacity: 0;
   animation: hostListingCardIn 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  will-change: opacity, transform;
+  will-change: transform, opacity;
 }
 
 @media (prefers-reduced-motion: reduce) {
